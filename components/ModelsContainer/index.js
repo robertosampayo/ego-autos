@@ -11,8 +11,6 @@ export const ModelsContainer = (props) => {
     useEffect(() => {
 
         updateModels(models)
-        console.log('cambie segmento')
-        // console.log(models)
 
 
     }, [models, segment])
@@ -37,7 +35,7 @@ export const ModelsContainer = (props) => {
 
                             <Model key={model.id}
                                 name={model.name}
-                                price={model.year}
+                                price={model.price}
                                 year={model.year}
                                 image={model.thumbnail}
                                 />
@@ -49,7 +47,7 @@ export const ModelsContainer = (props) => {
 
                         <Model key={model.id}
                             name={model.name}
-                            price={model.year}
+                            price={model.price}
                             year={model.year}
                             image={model.thumbnail}
                         />

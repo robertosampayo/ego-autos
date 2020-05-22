@@ -13,7 +13,6 @@ const SegmentProvider = (props) => {
         segment,
         setModelSegment: () => {
             setSegment('Autos')
-            console.log('estoy en provider!')
         },
         setTodos: () => {
             setSegment('Todos')

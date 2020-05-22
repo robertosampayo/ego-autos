@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './styles'
 import { TimelineLite, Power4, CSSPlugin, gsap } from 'gsap'
 import { theme } from '../../styles/theme';
-
+import animations  from '../../styles/animations'
 
 
 
@@ -31,15 +31,15 @@ export function Model ({image='', price='', year='', name='', id='', segment=nul
         <Fragment>
 
 
-            <div className='model' onMouseEnter={(e) => { e.preventDefault(); show(e) }} onMouseLeave={(e) => { e.preventDefault(); hide(e) }}>
+            <div className='model fade-in' onMouseEnter={(e) => { e.preventDefault(); show(e) }} onMouseLeave={(e) => { e.preventDefault(); hide(e) }}>
                 <h2 className='semibold' >{name}</h2>
-                <p>{year} | {price}</p>
+                <p>{year} | ${price}</p>
                 <img src={'http://challenge.agenciaego.tech'+image}></img>
                 <button>Ver Modelo</button>
             </div>
 
 
-
+            <style jsx>{animations}</style>
             <style jsx>{styles}</style>
         </Fragment>
 

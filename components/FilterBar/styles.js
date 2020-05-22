@@ -19,7 +19,7 @@ export default css`
                             justify-content: flex-start;
                             border-width: 0 0 1px;
                             border-style: solid;
-                            border-color: ${theme.grey};
+                            border-color: ${theme.gray};
                             padding: 0 0 5px;
                         }
 
@@ -47,7 +47,7 @@ export default css`
 
                         .filter-bar select{
                             position: absolute;
-                            right: 0;
+                            right: 20px;
                             padding: 0;
                             margin: 0;
                             cursor: pointer;
@@ -69,6 +69,13 @@ export default css`
                         h3, option {
                             font-family: ${theme.font_regular};
                             font-size: ${theme.h3size};
+                        }
+
+                        .order-input{
+                            position: absolute;
+                            right: 0;
+                            padding: 0;
+                            margin: 0;
                         }
 
 
@@ -116,7 +123,7 @@ export default css`
 
                         .filter-bar select{
                             position: absolute;
-                            right: 0;
+                            right: 20px;
                             padding: 0;
                             margin: 0;
                         }

@@ -13,7 +13,6 @@ import { ModelsContainer } from '../components/ModelsContainer'
 const Home = (props) => {
 
 
-
   return (
 
 
@@ -22,6 +21,8 @@ const Home = (props) => {
 
 
                 <Layout title='Agencia Ego'>
+
+
 
                     <div className='home-container'>
                       <PrincipalMessage message='Descubrí todos los modelos' />
@@ -50,5 +51,7 @@ const Home = (props) => {
     </div>
   )
 }
+
+
 
 export default Home;

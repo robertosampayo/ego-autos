@@ -14,7 +14,7 @@ export default css`
                 .menu-container{
                     border-style: solid;
                     border-width: 0 0 1px;
-                    border-color: ${theme.grey};
+                    border-color: ${theme.gray};
                 }
 
                 .menu-logo{
