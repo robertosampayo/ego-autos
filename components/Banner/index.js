@@ -69,7 +69,7 @@ export const Banner = ({name='', title='', description='', image=''}) => {
                 }
 
                 .banner img{
-                    width: auto;
+                    width: 60%;
                     height: auto;
                 }
 
