@@ -6,9 +6,9 @@ import { theme } from '../../styles/theme';
 import animations  from '../../styles/animations'
 
 
-
 export function Model ({image='', price='', year='', name='', id='', segment=null}) {
 
+    gsap.registerPlugin(CSSPlugin)
     const [gsapTL] = useState(new TimelineLite({}));
     const [colorTL] = useState(new TimelineLite({}));
 
