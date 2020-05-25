@@ -64,8 +64,8 @@ export const Menu = () => {
                                     <Item onlyDesktop={true} active={id ? true : false}  href='/'>Ficha Tecnica</Item>
 
 
-                                    <span className='menu-logo onlyDesktop' onClick={(e) => { openNavigation() }}>
-                                        Menú <AiOutlineMenu size='25' style={{margin :'0 0 0 20px'}} />
+                                    <span className='menu-logo onlyDesktopFlex' onClick={(e) => { openNavigation() }}>
+                                        <p>Menú</p>  <AiOutlineMenu size='25' style={{margin :'0 0 0 20px'}} />
 
                                     </span>
 
@@ -133,6 +133,14 @@ export const Menu = () => {
 
             }
 
+            @media (min-width: 481px) and (max-width: 767px) {
+
+                .navigation {
+                    transform: translate(110%, 60px);
+                }
+
+
+            }
 
 
             @media (min-width: 320px) and (max-width: 480px) {
