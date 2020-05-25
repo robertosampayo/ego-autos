@@ -81,7 +81,10 @@ export default css`
 
                 @media (min-width: 320px) and (max-width: 480px) {
 
-
+                .principal-message h1{
+                    font-size: ${MessageTheme.h1mobile};
+                    color: ${theme.darkLight};
+                }
 
 
                 }

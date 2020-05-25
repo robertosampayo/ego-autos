@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, Fragment } from 'react'
 import { Model } from '../../components/Model'
 import { ModelContext } from '../../providers/ModelProvider'
 import { SegmentContext } from '../../providers/SegmentProvider'
-
+import { Button } from '../Button'
 export const ModelsContainer = (props) => {
 
     const {models, updateModels} = useContext(ModelContext);
@@ -25,54 +25,49 @@ export const ModelsContainer = (props) => {
 
                     <section className='models-container'>
 
-                {models && models.map(model => {
+                                {models && models.map(model => {
 
 
 
-                    if (model.segment === segment) {
+                                    if (model.segment === segment) {
 
-                        return (
+                                        return (
 
-                            <Model key={model.id}
-                                name={model.name}
-                                price={model.price}
-                                year={model.year}
-                                image={model.thumbnail}
-                                />
+                                            <Button key={model.id} href={`/${model.id}`}>
 
-                        )
-                    }
+                                                <Model key={`model-${model.id}`}
+                                                    name={model.name}
+                                                    price={model.price}
+                                                    year={model.year}
+                                                    image={model.thumbnail}
+                                                    />
 
-                    return (
-
-                        <Model key={model.id}
-                            name={model.name}
-                            price={model.price}
-                            year={model.year}
-                            image={model.thumbnail}
-                        />
-
-                    )
+                                            </Button>
 
 
-                }
+                                        )
+                                    }
+
+                                    return (
+                                        <Button key={model.id} href={`/${model.id}`}>
+
+                                            <Model key={`model-${model.id}`}
+                                                name={model.name}
+                                                price={model.price}
+                                                year={model.year}
+                                                image={model.thumbnail}
+                                            />
+
+                                        </Button>
+
+                                    )
 
 
-                ) }
-{/*
-{models && models.map(function (val, i, model) {
+                                }
 
-    // console.log(val.id);
-    <Model key={val.id}
-        name={val.name}
-        price={val.year}
-        year={val.year}
-        image={val.thumbnail}
-    />
 
-})
+                                ) }
 
-}*/}
 
 
 
@@ -87,9 +82,17 @@ export const ModelsContainer = (props) => {
                                 display: flex;
                                 flex-direction: row;
                                 flex-wrap: wrap;
-                                justify-content: stretch;
+                                justify-content: center;
                             }
 
+                            @media (min-width: 320px) and (max-width: 480px) {
+                                .models-container{
+
+                                    justify-content: center;
+
+                                }
+
+                            }
 
                         `}
                     </style>

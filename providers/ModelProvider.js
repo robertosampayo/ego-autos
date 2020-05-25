@@ -99,6 +99,12 @@ const ModelProvider = (props) => {
         },
         updateOrder: (order) => {
             console.log(order)
+
+            if (order == 0) {
+                var modelsFiltered = [...models].sort((a, b) => a['id'] - b['id'])
+                setModels(modelsFiltered)
+
+            }
             if (order == 1) {
 
                 var modelsFiltered = [...models].sort((a, b) => a['price'] - b['price'])

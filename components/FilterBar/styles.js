@@ -21,6 +21,7 @@ export default css`
                             border-style: solid;
                             border-color: ${theme.gray};
                             padding: 0 0 5px;
+                            position: relative;
                         }
 
                         .filter-bar ul{
@@ -31,12 +32,12 @@ export default css`
                         }
 
                         .filter-bar > h3 {
-                            width: 8%;
+                            width: 180px;
 
                         }
 
-                        .filter-bar li{
-                            margin: 0 0 0 50px;
+                        .filter-bar .item{
+                            margin: 0 0 0 40px;
                             list-style: none;
                             cursor: pointer;
                         }
@@ -45,9 +46,9 @@ export default css`
                             font-size: ${theme.font_regular};
                         }
 
-                        .filter-bar select{
-                            position: absolute;
-                            right: 20px;
+                        .filter-bar .select-order{
+                            position: relative;
+                            right: 0;
                             padding: 0;
                             margin: 0;
                             cursor: pointer;
@@ -72,11 +73,34 @@ export default css`
                         }
 
                         .order-input{
-                            position: absolute;
-                            right: 0;
-                            padding: 0;
-                            margin: 0;
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+
                         }
+                        .models-input-mobile {
+                            width: 50%;
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                @media (min-width: 1650px) {
@@ -108,14 +132,11 @@ export default css`
                         }
 
                         .filter-bar > h3 {
-                            width: 8%;
+                            width: 180px;
 
                         }
 
-                        .filter-bar li{
-                            margin: 0 0 0 50px;
-                            list-style: none;
-                        }
+
 
                         .filter-bar li h3 {
                             font-size: ${theme.font_regular};
@@ -130,7 +151,7 @@ export default css`
 
                         .filter-bar .active {
                             background: ${theme.greyLight};
-                            padding: 10px 15px;
+                            padding: 0px 20px;
                             border-radius: 50px;
                             color: ${theme.dark};
                         }
@@ -165,7 +186,14 @@ export default css`
 
                 @media (min-width: 768px) and (max-width: 1024px) {
 
+                        .filter-bar .item {
+                             text-align: center;
+                        }
 
+                        .filter-bar .item{
+                            padding: 5px;
+                            text-align: center;
+                        }
                 }
 
                 /*
@@ -184,7 +212,14 @@ export default css`
                 */
 
                 @media (min-width: 481px) and (max-width: 767px) {
+                        .filter-bar .item {
+                             text-align: center;
+                        }
 
+                        .filter-bar .item{
+                            padding: 5px;
+                            text-align: center;
+                        }
 
                 }
 
@@ -194,6 +229,10 @@ export default css`
                 */
 
                 @media (min-width: 320px) and (max-width: 480px) {
+
+                        .filter-bar{
+                            height: 40px;
+                        }
 
 
 

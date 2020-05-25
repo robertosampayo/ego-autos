@@ -25,6 +25,45 @@ export default css`
 
                @media (min-width: 1650px) {
 
+                        ul.menu{
+                            position: relative;
+                            display: flex;
+                            order: 1;
+                            justify-content: center;
+                            flex-direction: row;
+                            color: ${theme.texto};
+                            padding: 0;
+                            list-style: none;
+                            justify-content: flex-start;
+                            font-family: 'Lora', serif;
+                            width: 90%;
+                            margin: 0 0 0 auto;
+                            height: ${theme.navSize};
+                            align-items: center;
+                        }
+                        nav{
+                                display: flex;
+                                justify-content: flex-start;
+                                background: ${theme.background};
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                min-height: ${theme.navSize};
+                                align-items: center;
+                                padding: 0 40px;
+                        }
+
+
+
+                        nav ul span {
+                            position: absolute;
+                            display: flex;
+                            align-self: center;
+                            justify-self: center;
+                            right: 0;
+                            color: ${theme.dark};
+                            display: flex;
+                            align-items: center;
+                        }
 
                 }
 
@@ -86,6 +125,45 @@ export default css`
                 */
 
                 @media (min-width: 1025px) and (max-width: 1280px) {
+                        ul.menu{
+                            position: relative;
+                            display: flex;
+                            order: 1;
+                            justify-content: center;
+                            flex-direction: row;
+                            color: ${theme.texto};
+                            padding: 0;
+                            list-style: none;
+                            justify-content: flex-start;
+                            font-family: 'Lora', serif;
+                            width: 90%;
+                            margin: 0 0 0 auto;
+                            height: ${theme.navSize};
+                            align-items: center;
+                        }
+                        nav{
+                                display: flex;
+                                justify-content: flex-start;
+                                background: ${theme.background};
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                min-height: ${theme.navSize};
+                                align-items: center;
+                                padding: 0 40px;
+                        }
+
+
+
+                        nav ul span {
+                            position: absolute;
+                            display: flex;
+                            align-self: center;
+                            justify-self: center;
+                            right: 0;
+                            color: ${theme.dark};
+                            display: flex;
+                            align-items: center;
+                        }
 
 
                 }
@@ -96,6 +174,45 @@ export default css`
                 */
 
                 @media (min-width: 768px) and (max-width: 1024px) {
+                        ul.menu{
+                            position: relative;
+                            display: flex;
+                            order: 1;
+                            justify-content: center;
+                            flex-direction: row;
+                            color: ${theme.texto};
+                            padding: 0;
+                            list-style: none;
+                            justify-content: flex-start;
+                            font-family: 'Lora', serif;
+                            width: 90%;
+                            margin: 0 0 0 auto;
+                            height: ${theme.navSize};
+                            align-items: center;
+                        }
+                        nav{
+                                display: flex;
+                                justify-content: flex-start;
+                                background: ${theme.background};
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                min-height: ${theme.navSize};
+                                align-items: center;
+                                padding: 0 40px;
+                        }
+
+
+
+                        nav ul span {
+                            position: absolute;
+                            display: flex;
+                            align-self: center;
+                            justify-self: center;
+                            right: 0;
+                            color: ${theme.dark};
+                            display: flex;
+                            align-items: center;
+                        }
 
 
                 }
@@ -107,6 +224,45 @@ export default css`
 
                 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
+                        ul.menu{
+                            position: relative;
+                            display: flex;
+                            order: 1;
+                            justify-content: center;
+                            flex-direction: row;
+                            color: ${theme.texto};
+                            padding: 0;
+                            list-style: none;
+                            justify-content: flex-start;
+                            font-family: 'Lora', serif;
+                            width: 90%;
+                            margin: 0 0 0 auto;
+                            height: ${theme.navSize};
+                            align-items: center;
+                        }
+                        nav{
+                                display: flex;
+                                justify-content: flex-start;
+                                background: ${theme.background};
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                min-height: ${theme.navSize};
+                                align-items: center;
+                                padding: 0 40px;
+                        }
+
+
+
+                        nav ul span {
+                            position: absolute;
+                            display: flex;
+                            align-self: center;
+                            justify-self: center;
+                            right: 0;
+                            color: ${theme.dark};
+                            display: flex;
+                            align-items: center;
+                        }
 
                 }
 
@@ -117,6 +273,45 @@ export default css`
 
                 @media (min-width: 481px) and (max-width: 767px) {
 
+                        ul.menu{
+                            position: relative;
+                            display: flex;
+                            order: 1;
+                            justify-content: center;
+                            flex-direction: row;
+                            color: ${theme.texto};
+                            padding: 0;
+                            list-style: none;
+                            justify-content: flex-start;
+                            font-family: 'Lora', serif;
+                            width: 90%;
+                            margin: 0 0 0 auto;
+                            height: ${theme.navSize};
+                            align-items: center;
+                        }
+                        nav{
+                                display: flex;
+                                justify-content: flex-start;
+                                background: ${theme.background};
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                min-height: ${theme.navSize};
+                                align-items: center;
+                                padding: 0 40px;
+                        }
+
+
+
+                        nav ul span {
+                            position: absolute;
+                            display: flex;
+                            align-self: center;
+                            justify-self: center;
+                            right: 0;
+                            color: ${theme.dark};
+                            display: flex;
+                            align-items: center;
+                        }
 
                 }
 
@@ -128,6 +323,45 @@ export default css`
                 @media (min-width: 320px) and (max-width: 480px) {
 
 
+                        ul.menu{
+                            position: relative;
+                            display: flex;
+                            order: 1;
+                            justify-content: center;
+                            flex-direction: row;
+                            color: ${theme.texto};
+                            padding: 0;
+                            list-style: none;
+                            justify-content: flex-start;
+                            font-family: 'Lora', serif;
+                            width: auto;
+                            margin: 0 0 0 auto;
+                            height: ${theme.navSize};
+                            align-items: center;
+                        }
+                        nav{
+                                display: flex;
+                                justify-content: flex-start;
+                                background: ${theme.background};
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                min-height: ${theme.navSize};
+                                align-items: center;
+                                padding: 0 40px;
+                        }
+
+
+
+                        nav ul span {
+                            position: absolute;
+                            display: flex;
+                            align-self: center;
+                            justify-self: center;
+                            right: 0;
+                            color: ${theme.dark};
+                            display: flex;
+                            align-items: center;
+                        }
 
 
                 }

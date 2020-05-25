@@ -1,6 +1,7 @@
 export const theme = {
     primaryGreen: '#53764c',
-    dark: '#191919',
+    // dark: '#191919',
+    dark: '#373737',
     red: '#eb0a1e',
     // grey: '#D3D3D3',
     gray: '#D3D3D3',
@@ -22,6 +23,7 @@ export const theme = {
     backgroundSepiaTransparente: '#f6e4c49c',
     borderLines: '#a29371',
     white: '#ffffff',
+    whiteGray: '#f4f7f6',
     mobile: '576px',
     navSize: '60px',
     width1500: '65%',
@@ -38,6 +40,8 @@ export const theme = {
 
     h1size: '50px',
     h3size: '14px',
+    psize: '10px',
+    h1mobile: '35px',
 
     font_regular: '\'Montserrat\', sans-serif; font-weight: 400;',
     font_bold: '\'Montserrat\', sans-serif; font-weight: 600;',
@@ -48,4 +52,5 @@ export const theme = {
 export const MessageTheme = {
     h1size: '50px',
     h3size: '14px',
+    h1mobile: '35px',
 }

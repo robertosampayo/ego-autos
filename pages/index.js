@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext, Fragment } from 'react'
 import Head from 'next/head'
-import homeStyle from '../styles/home.js'
 import {Layout} from '../components/Layout'
 import {PrincipalMessage} from '../components/PrincipalMessage'
 import {FilterBar} from '../components/FilterBar'
@@ -36,15 +35,6 @@ const Home = (props) => {
 
                 </Layout>
 
-
-      <style jsx>
-        {`
-
-
-
-
-        `}
-      </style>
 
 
 

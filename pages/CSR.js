@@ -7,26 +7,39 @@ import { ModelHighlights } from '../components/ModelHighlights'
 import { API_URL } from '../lib/constants'
 import Swiper from 'react-id-swiper'
 import { theme } from '../styles/theme'
-import { useRouter } from 'next/router';
-import Error from 'next/error';
 
 const https = require("https");
 
 
-function Detail  ({model}) {
-
+function Detail  ({id}) {
 
     const [swiper, updateSwiper] = useState(null);
-    const [statusCode, setStatusCode] = useState(200);
     const isOdd = (num) => { return num % 2; }
+    const [model, setModel] =   useState(null)
 
     useEffect(() => {
-        if (!model) {
-           setStatusCode(404)
-        }else{
-            setStatusCode(200)
-        }
+
+        getModels()
+
     }, [])
+
+    const getModels = async () => {
+
+        const agent = new https.Agent({
+            rejectUnauthorized: false
+        })
+        const res = await fetch(`https://challenge.agenciaego.tech/models/${id}`,
+            {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+
+                },
+                agent: agent,
+            })
+        const model = await res.json()
+        setModel(model)
+    }
+
 
     const params = {
         pagination: {
@@ -46,11 +59,6 @@ function Detail  ({model}) {
         speed: 900,
         parallax: true,
     }
-
-
-    // if (statusCode !== 200) {
-    //     return <Error statusCode={statusCode} title="Este modelo no existe" />
-    // }
 
     return (
 
@@ -84,7 +92,7 @@ function Detail  ({model}) {
 
                                             return (
 
-                                                <section key={`${features.name}-${features.id}`} className='item'>
+                                                <section className='item'>
                                                             <img src={`${API_URL}${features.photo}`} />
                                                             <h3>{features.name}</h3>
                                                             <p>{features.description}</p>
@@ -212,23 +220,6 @@ function Detail  ({model}) {
                     }
 
 
-                @media (min-width: 481px) and (max-width: 767px) {
-                    .item {
-                        width: 80%;
-                        padding: 20px;
-                        transform: translateX(20px);
-                    }
-
-                }
-
-                @media (min-width: 320px) and (max-width: 480px) {
-                    .item {
-                        width: 80%;
-                        padding: 20px;
-                        transform: translateX(20px);
-                    }
-                }
-
 
         `}
             </style>
@@ -251,72 +242,52 @@ function Detail  ({model}) {
     )
 }
 
-export async function getStaticPaths() {
-
-
-    const agent = new https.Agent({
-        rejectUnauthorized: false
-    })
-
-  // Call an external API endpoint to get posts
-  const res = await fetch('https://challenge.agenciaego.tech/models',
-              {
-                headers: {
-                  'Content-Type': 'application/json; charset=utf-8',
-
-                },
-                agent: agent,
-            })
-  const cars = await res.json()
-
-  // Get the paths we want to pre-render based on posts
-  const paths = cars.map(car => `/${car.id}`)
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
-}
-
-
-
 // export async function getStaticPaths() {
-//     return { paths: [], fallback: true };
+
+
+//     const agent = new https.Agent({
+//         rejectUnauthorized: false
+//     })
+
+//   // Call an external API endpoint to get posts
+//   const res = await fetch('https://challenge.agenciaego.tech/models',
+//               {
+//                 headers: {
+//                   'Content-Type': 'application/json; charset=utf-8',
+
+//                 },
+//                 agent: agent,
+//             })
+//   const cars = await res.json()
+
+//   // Get the paths we want to pre-render based on posts
+//   const paths = cars.map(car => `/${car.id}`)
+
+//   // We'll pre-render only these paths at build time.
+//   // { fallback: false } means other routes should 404.
+//   return { paths, fallback: false }
 // }
 
 export const getStaticProps = async ({params : {id}}) => {
 
-    try {
+    // const agent = new https.Agent({
+    //     rejectUnauthorized: false
+    // })
+    // const res = await fetch(`https://challenge.agenciaego.tech/models/${params.id}`,
+    //         {
+    //             headers: {
+    //               'Content-Type': 'application/json; charset=utf-8',
 
-        const agent = new https.Agent({
-            rejectUnauthorized: false
-        })
-        const response = await fetch(`https://challenge.agenciaego.tech/models/${id}`,
-                {
-                    headers: {
-                    'Content-Type': 'application/json; charset=utf-8',
-
-                    },
-                    agent: agent,
-                })
-
+    //             },
+    //             agent: agent,
+    //         })
+    // const model = await res.json()
 
 
-            const model = await response.json()
-
-
-            return {
-                props: { model, unstable_revalidate: 1 }
-            }
-
-
-
-    } catch (error) {
-        // The Twitter API most likely died
-        console.error(error);
-        return { props: { } };
-    }
-
-
+  return {
+            // props: { model }
+            props: { id }
+        }
 }
 
 export default Detail
