@@ -115,7 +115,7 @@ function Detail  ({model}) {
 
                                         return (
 
-                                            <ModelHighlights
+                                            <ModelHighlights key={`${highlight.title}-${i}`}
                                                 title={highlight.title}
                                                 content={highlight.content}
                                                 image={highlight.image}
@@ -128,7 +128,7 @@ function Detail  ({model}) {
                                     if (isOdd(i) === 1) {
                                         return (
 
-                                            <ModelHighlights
+                                            <ModelHighlights key={`${highlight.title}-${i}`}
                                                 title={highlight.title}
                                                 content={highlight.content}
                                                 image={highlight.image}

@@ -4,7 +4,7 @@ import styles from './styles'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { RiCloseLine } from 'react-icons/ri'
 import {Item} from '../../components/Item'
-import { TimelineLite, Power4, CSSPlugin, gsap } from 'gsap'
+import { timeline, Power4, CSSPlugin, gsap } from 'gsap'
 import { NavigationItems } from '../../components/NavigationItems'
 import { theme } from '../../styles/theme'
 import { useRouter, withRouter } from 'next/router';
@@ -15,7 +15,7 @@ export const Menu = () => {
     gsap.registerPlugin(CSSPlugin)
     const { query: { id } } = useRouter();
     const [navigate, setNavigate] = useState(false)
-    const [gsapTL] = useState(new TimelineLite({}))
+    const [gsapTL] = useState(gsap.timeline({}))
     const navigation = createRef()
     const navigationMob = createRef()
 
