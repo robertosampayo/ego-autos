@@ -5,11 +5,18 @@ import {PrincipalMessage} from '../components/PrincipalMessage'
 import {FilterBar} from '../components/FilterBar'
 import { theme, MessageTheme } from '../styles/theme'
 import { TimelineLite, Power4, CSSPlugin, gsap } from 'gsap'
-
+import Router from 'next/router'
 import { ModelsContainer } from '../components/ModelsContainer'
-
+import NProgress from 'nprogress'
 
 const Home = (props) => {
+
+
+  Router.onRouteChangeStart = (url) => {
+    NProgress.start()
+  }
+  Router.onRouteChangeComplete = () => NProgress.done()
+  Router.onRouteChangeError = () => NProgress.done()
 
 
   return (
