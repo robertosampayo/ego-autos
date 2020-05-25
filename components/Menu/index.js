@@ -12,6 +12,7 @@ import { useRouter, withRouter } from 'next/router';
 
 export const Menu = () => {
 
+    gsap.registerPlugin(CSSPlugin)
     const { query: { id } } = useRouter();
     const [navigate, setNavigate] = useState(false)
     const [gsapTL] = useState(new TimelineLite({}))
