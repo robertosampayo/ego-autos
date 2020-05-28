@@ -81,6 +81,16 @@ export const Banner = ({name='', title='', description='', image=''}) => {
                     width: 475px;
                 }
 
+                @media (min-width: 768px) and (max-width: 1024px) {
+
+                    .banner{
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+
+                }
+
                 @media (min-width: 481px) and (max-width: 767px) {
                     .banner{
                         display: flex;

@@ -67,8 +67,8 @@ export const ModelHighlights = ({  title = '', content = '', image = '', imagePo
 
                 .highlights-detail .image img {
 
-                    height: 295px;
-                    width: auto;
+                    height: auto;
+                    width: 100%;
                     border-radius: 5px;
                 }
 
@@ -85,6 +85,38 @@ export const ModelHighlights = ({  title = '', content = '', image = '', imagePo
 
                 .right { flex-direction: row-reverse; }
 
+                @media (min-width: 1025px) and (max-width: 1280px) {
+                    .highlights-detail p{
+
+                        width: 80%;
+
+                    }
+
+                    .highlights-detail h3{
+
+                        width: 80%;
+
+                    }
+
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+
+
+                    .highlights-detail p{
+
+                        width: 80%;
+
+                    }
+
+                    .highlights-detail h3{
+
+                        width: 80%;
+
+                    }
+
+
+                }
 
                 @media (min-width: 481px) and (max-width: 767px) {
 

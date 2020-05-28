@@ -27,7 +27,7 @@ export const Menu = () => {
 
     const closeNavigation = () => {
         gsapTL.to(navigation.current, { duration: 0.6, css: { transform: 'translateX(110%)' } })
-        gsapTL.to(navigation.current, { duration: 0.1, css: { display: 'block' } })
+        gsapTL.to(navigation.current, { duration: 0.1, css: { display: 'none' } })
 
     }
 
@@ -76,7 +76,7 @@ export const Menu = () => {
                                     </span>
                             </ul>
 
-                            <div className='navigation onlyDesktop' ref={navigation}>
+                <div className='navigation onlyDesktopHere' ref={navigation}>
                                 <div className='cerrar' onClick={(e) => { closeNavigation() }}><p>Cerrar  </p><span><RiCloseLine /></span></div>
                                 <NavigationItems items={menu1}  />
                                 <NavigationItems items={menu2}  />
@@ -116,6 +116,10 @@ export const Menu = () => {
 
             }
 
+            .navigation .onlyDesktopHere{
+                display: block;
+            }
+
 
 
             .navigation .cerrar {
@@ -140,6 +144,9 @@ export const Menu = () => {
                     transform: translate(110%, 60px);
                 }
 
+                .navigation .onlyDesktopHere{
+                    display: none;
+                }
 
             }
 
@@ -154,6 +161,10 @@ export const Menu = () => {
                     border-color: ${theme.greyLight};
                     display: none;
 
+                }
+
+                .navigation .onlyDesktopHere{
+                    display: none;
                 }
 
 
