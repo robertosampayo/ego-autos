@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0",
     "gsap": "^3.2.6",
