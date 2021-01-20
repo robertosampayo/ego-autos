@@ -13,7 +13,7 @@
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0",
-    "gsap": "^3.2.6",
+    "gsap": "^3.6.0",
     "isomorphic-fetch": "^2.2.1",
     "next": "9.4.1",
     "next-page-transitions": "^1.0.0-beta.2",
