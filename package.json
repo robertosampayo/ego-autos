@@ -31,6 +31,6 @@
     "react-spring": "^8.0.27",
     "slugify": "^1.4.0",
     "styled-components": "^5.1.0",
-    "swiper": "^5.3.8"
+    "swiper": "^6.5.1"
   }
 }
